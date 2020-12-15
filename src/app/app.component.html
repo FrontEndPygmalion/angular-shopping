@@ -34,6 +34,53 @@
 <hr>
 <h2>Agregar un elemento a una lista</h2>
 <input type="text" [(ngModel)]="usuario">
-<button (click)='addItem(usuario)'> Agregar item</button>
+<button class="btn btn-primary" (click)='addItem(usuario)'> Agregar item</button>
 
 <button (click) = 'deleteItem()'> Borrar ultimo</button>
+
+
+<hr>
+
+<h2> ngFor para recorrer Objetos</h2>
+
+<div *ngFor="let producto of productos">
+  {{ producto.name }}
+  <!-- <img src={{producto.image}} alt=""> -->
+  <!-- <img [src]="producto.image" alt=""> -->
+  {{producto.price}}
+</div>
+
+<hr>
+
+<h2>uso de  NgSwitch</h2>
+
+<div [ngSwitch]="usuario" >
+    <p *ngSwitchCase = "'caso1'">
+      caso 1
+    </p>
+
+    <p *ngSwitchCase="'caso2'">
+      caso 2
+    </p>
+
+
+</div>
+
+
+<hr>
+<h2>uso de NgStyle</h2>
+
+
+<div [ngStyle] = "{'background': usuario }"
+>
+Hola soy un style dinamico
+</div>
+
+
+<hr>
+<h2>uso de ngClass</h2>
+
+
+<div [ngClass]="{'mi-clase': usuario === '25' }">
+  Hola una clase dinamica
+</div>
