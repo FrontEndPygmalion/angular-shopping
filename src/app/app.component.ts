@@ -39,6 +39,20 @@ export class AppComponent {
       name: 'chocolate',
       description: 'delicioso quesito',
       price: 2500
+    },
+    {
+      id: 3,
+      image: 'https://www.vivosano.org/wp-content/uploads/beneficios-chocolate.jpg',
+      name: 'chocolate',
+      description: 'delicioso quesito',
+      price: 2500
+    },
+    {
+      id: 4,
+      image: 'https://www.vivosano.org/wp-content/uploads/beneficios-chocolate.jpg',
+      name: 'chocolate',
+      description: 'delicioso quesito',
+      price: 2500
     }
   ]
 

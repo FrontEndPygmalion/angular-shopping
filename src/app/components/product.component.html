@@ -3,11 +3,10 @@
     <h2>{{product.name}}</h2>
   </div>
   <div class="card-body">
+    <img src={{product.image}} alt="">
     {{ product.price }}
   </div>
   <div class="card-footer">
-    <button
-      class="btn btn-primary"
-      (click)="addCart()"> Agregar al carrito</button>
+    <button class="btn btn-primary" (click)="addCart()"> Agregar al carrito</button>
   </div>
 </div>
