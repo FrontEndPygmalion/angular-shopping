@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Product } from './components/product.model'
 
 @Component({
   selector: 'app-root',
@@ -24,6 +25,25 @@ export class AppComponent {
   }
 
 
+  productos: Product[] = [
+    {
+      id: 1,
+      image: 'https://www.mercadoslpineda.co/1749-large_default/quesito-colanta-x-400-g-montefrio.jpg',
+      name: 'quesito',
+      description: 'delicioso quesito',
+      price: 2500
+    },
+    {
+      id: 2,
+      image: 'https://www.vivosano.org/wp-content/uploads/beneficios-chocolate.jpg',
+      name: 'chocolate',
+      description: 'delicioso quesito',
+      price: 2500
+    }
+  ]
 
+clickProduct(id: number) {
+    console.log('agregaste el producto con id ', id)
+}
 
 }

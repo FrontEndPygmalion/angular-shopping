@@ -1,26 +1,50 @@
-import { Component } from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  OnChanges,
+  SimpleChange,
+  OnInit,
+  DoCheck,
+  OnDestroy
+} from '@angular/core';
 import { Product } from './product.model';
 
 @Component({
-  selector : 'app-product',
+  selector: 'app-product',
   templateUrl: './product.component.html'
 })
 
 export class ProductComponent {
-  productos: Product[] = [
-    {
-      id: 1,
-      image: 'https://www.mercadoslpineda.co/1749-large_default/quesito-colanta-x-400-g-montefrio.jpg',
-      name: 'quesito',
-      description: 'delicioso quesito',
-      price: 2500
-    },
-    {
-      id: 2,
-      image: 'https://www.vivosano.org/wp-content/uploads/beneficios-chocolate.jpg',
-      name: 'chocolate',
-      description: 'delicioso quesito',
-      price: 2500
-    }
-  ]
+
+  constructor() {
+    console.log('1. Constructor')
+  }
+
+  // ngOnChanges(changes: SimpleChange) {
+  //   console.log('2. ngOnChanges', changes)
+  // }
+
+  ngOnInit() {
+    console.log('3. ng On Init')
+
+  }
+
+  ngDoCheck(){
+    console.log('4. DoCheck')
+  }
+
+  ngOnDestroy(){
+    console.log('5. OnDestroy')
+  }
+
+  @Input() product: Product /* este input nos permite traer informacion de un componente padre, en este caso el producto */
+
+
+  @Output() productClicked: EventEmitter<any> = new EventEmitter();
+
+  addCart() {
+    this.productClicked.emit(this.product.id)
+  }
 }

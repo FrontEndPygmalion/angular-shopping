@@ -1,1 +1,13 @@
-<app-product></app-product>
+
+<h2>Lista de productos</h2>
+
+<div *ngFor="let producto of productos">
+<app-product
+(productClicked) = "clickProduct($event)"
+[product] = "producto">
+</app-product>
+
+
+</div>
+
+
