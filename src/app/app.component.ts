@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product } from './product.model';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,11 @@ export class AppComponent {
     this.usuarios.pop()
   }
 
-  productos = [
+  deleteSingleItem(index) {
+    this.usuarios.splice(index, 1)
+  }
+
+  productos: Product[] = [
     {
       id: 1,
       image: 'https://www.mercadoslpineda.co/1749-large_default/quesito-colanta-x-400-g-montefrio.jpg',

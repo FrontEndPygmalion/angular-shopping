@@ -26,8 +26,8 @@
 
 <h2>Directiva ngFor con Indice</h2>
 <ul>
-  <li *ngFor="let usuario of usuarios; index as i">
-    {{ usuario }} {{i}}
+  <li *ngFor="let usuario of usuarios; index as indice">
+    {{ usuario }} {{indice}} <button  (click) ='deleteSingleItem(indice)' class="btn btn-secondary"> Borrar </button>
   </li>
 </ul>
 
@@ -41,7 +41,7 @@
 
 <hr>
 
-<h2> ngFor para recorrer Objetos</h2>
+<h2> ngFor para recorrer Areglos de sObjetos</h2>
 
 <div *ngFor="let producto of productos">
   {{ producto.name }}
@@ -55,12 +55,12 @@
 <h2>uso de  NgSwitch</h2>
 
 <div [ngSwitch]="usuario" >
-    <p *ngSwitchCase = "'caso1'">
-      caso 1
+    <p *ngSwitchCase = "'pepito'">
+      pepito es caso 1
     </p>
 
-    <p *ngSwitchCase="'caso2'">
-      caso 2
+    <p *ngSwitchCase="'maria'">
+     maria es caso 2
     </p>
 
 
