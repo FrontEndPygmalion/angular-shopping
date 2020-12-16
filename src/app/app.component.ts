@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Product } from './product.model';
 
 @Component({
   selector: 'app-root',
@@ -24,22 +23,7 @@ export class AppComponent {
     this.usuarios.splice(index, 1)
   }
 
-  productos: Product[] = [
-    {
-      id: 1,
-      image: 'https://www.mercadoslpineda.co/1749-large_default/quesito-colanta-x-400-g-montefrio.jpg',
-      name: 'quesito',
-      description: 'delicioso quesito',
-      price: 2500
-    },
-    {
-      id: 2,
-      image: 'https://www.vivosano.org/wp-content/uploads/beneficios-chocolate.jpg',
-      name: 'chocolate',
-      description: 'delicioso quesito',
-      price: 2500
-    }
-  ]
+
 
 
 }
