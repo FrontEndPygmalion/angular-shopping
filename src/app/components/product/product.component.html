@@ -1,13 +1,13 @@
-<div class="card" style="width: 18rem;">
-  <img src={{product.image}} class="card-img-top" alt="...">
+<div class="card h-100">
+  <a href="">
+    <img src={{product.image}} class="card-img" alt={{product.name}}>
+  </a>
   <div class="card-body">
-    <h5 class="card-title">{{product.name | uppercase }}</h5>
+    <h4 class="card-title">{{product.name | uppercase }}</h4>
+    <h5> {{ product.price | currency:'COP' }} </h5>
     <p class="card-text">
       {{ product.description | slice : 0 : 50 }}
     </p>
-    {{ product.price | currency:'COP' }}
-   <h1> {{ product.price | exponential:exponente }} </h1>
-
     <button class="btn btn-primary" (click)="addCart()"> Agregar al carrito</button>
   </div>
 </div>

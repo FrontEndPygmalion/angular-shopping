@@ -11,7 +11,9 @@ import { DetailComponent } from './pages/detail/detail.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
-import { FormRegisterComponent } from './pages/form-register/form-register.component'
+import { FormRegisterComponent } from './components/form-register/form-register.component'
+
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { FormRegisterComponent } from './pages/form-register/form-register.compo
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   exports : [
     /* Declaracion de modulos que van a ser consumidos por otros modulos */
