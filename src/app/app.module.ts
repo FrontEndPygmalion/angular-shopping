@@ -3,10 +3,15 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { ProductComponent } from './components/product.component';
+import { ProductComponent } from './components/product/product.component';
 import { CardComponent } from './card/card.component';
 import { HeaderComponent } from './components/header/header.component';
-import { ExponentialPipe } from './pipes/exponential.pipe'
+import { ExponentialPipe } from './pipes/exponential.pipe';
+import { DetailComponent } from './pages/detail/detail.component';
+import { HomeComponent } from './pages/home/home.component';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { FormRegisterComponent } from './pages/form-register/form-register.component'
 
 @NgModule({
   declarations: [
@@ -14,7 +19,12 @@ import { ExponentialPipe } from './pipes/exponential.pipe'
     ProductComponent,
     CardComponent,
     HeaderComponent,
-    ExponentialPipe
+    ExponentialPipe,
+    DetailComponent,
+    HomeComponent,
+    LoginComponent,
+    RegisterComponent,
+    FormRegisterComponent
   ],
   imports: [
     BrowserModule,
