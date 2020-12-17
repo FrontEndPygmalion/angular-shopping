@@ -5,14 +5,16 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ProductComponent } from './components/product.component';
 import { CardComponent } from './card/card.component';
-import { HeaderComponent } from './components/header/header.component'
+import { HeaderComponent } from './components/header/header.component';
+import { ExponentialPipe } from './pipes/exponential.pipe'
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
     CardComponent,
-    HeaderComponent
+    HeaderComponent,
+    ExponentialPipe
   ],
   imports: [
     BrowserModule,

@@ -48,4 +48,7 @@ export class ProductComponent {
   addCart() {
     this.productClicked.emit(this.product.id)
   }
+
+
+  exponente = 3
 }
