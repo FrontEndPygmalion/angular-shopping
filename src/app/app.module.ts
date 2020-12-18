@@ -13,7 +13,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { FormRegisterComponent } from './components/form-register/form-register.component'
 
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http' /* Modulo http que me sirve para hacer peticione sa un API  */
+import { AppRoutingModule  } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -26,12 +27,15 @@ import { HttpClientModule } from '@angular/common/http'
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    FormRegisterComponent
+    FormRegisterComponent,
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
+
   ],
   exports : [
     /* Declaracion de modulos que van a ser consumidos por otros modulos */
