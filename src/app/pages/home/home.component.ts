@@ -47,7 +47,7 @@ export class HomeComponent implements OnInit {
     this.http.get('https://rickandmortyapi.com/api/character/?page=1')
       .subscribe(
         result => {
-          // this.products = result.results
+          this.products = result.results
         },
         error => {
           console.log(error)

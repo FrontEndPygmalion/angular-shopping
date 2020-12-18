@@ -1,5 +1,5 @@
 <div class="card h-100">
-  <a href="">
+  <a href="/product/{{product.id}}">
     <img src={{product.image}} class="card-img" alt={{product.name}}>
   </a>
   <div class="card-body">
@@ -7,6 +7,9 @@
     <h5> {{ product.price | currency:'COP' }} </h5>
     <p class="card-text">
       {{ product.description | slice : 0 : 50 }}
+      {{ product.status }}
+      <br>
+      {{ product.gender }}
     </p>
     <button class="btn btn-primary" (click)="addCart()"> Agregar al carrito</button>
   </div>
